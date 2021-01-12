@@ -59,8 +59,9 @@ summary:hover, input[type=number]:hover {
 	border-color: #36c;
 }
 summary:focus, input[type=number]:focus {
-	box-shadow: 2px 2px 0px #333;
 	outline: none;
+	box-shadow: 2px 2px 0px #333;
+	transition: box-shadow 0.25s ease-in-out;
 }
 a:focus {
 	outline: none;
@@ -76,6 +77,22 @@ details h3, input[type=number] {
 input[type=number] {
 	font-weight: bold;
 }
+
+details[open] h3, details[open] p {
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		margin-left: -1.25rem;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0;
+	}
+}
+
 
 @media (min-width: 640px) { /* sm */
 }
