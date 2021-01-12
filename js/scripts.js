@@ -1,4 +1,6 @@
 // todo: url params and searching/linking codes
+// expand all / collapse all btn
+// print friendly table and btn
 
 window.onload = ()=> {
 	document.getElementById('status-input').select();
