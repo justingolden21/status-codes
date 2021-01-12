@@ -86,21 +86,17 @@ summary svg {
 	vertical-align: middle;
 	height: 1.5rem;
 	margin-left: 0.25rem;
-	transition: color 0.25s linear;
-}
-details[open] summary svg {
-	color: #36c;
 }
 
 details {
-	border: 1px solid #999;
+	border: 1px solid #333;
 	padding: 1rem;
 }
 summary {
 	margin: -1rem;
 }
 details[open] summary {
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #333;
 	margin-bottom: 1rem;
 }
 
