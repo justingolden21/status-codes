@@ -4,6 +4,7 @@
 // input onchange: validate from list of options), then open correct details, then scroll to element with id
 // make input dropdown?
 // dark mode, fullscreen, contact btns on bottom?
+// update descriptions with <code></code> and more links like in source
 
 window.onload = ()=> {
 	document.getElementById('status-input').select();

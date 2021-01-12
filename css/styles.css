@@ -68,7 +68,7 @@ a:focus {
 	outline: none;
 	border: 1px solid #36c;
 }
-details p, details h3 {
+details p, details h3, details ul {
 	text-align: left; 
 }
 
@@ -79,7 +79,7 @@ details h3, input[type=number] {
 details[open] h3 {
 	animation: slideIn 0.5s ease-in-out;
 }
-details[open] p, details[open] hr {
+details[open] p, details[open] hr, details[open] ul {
 	animation: fadeIn 0.75s 0.25s both ease-in-out;
 }
 summary svg {
@@ -124,6 +124,9 @@ details[open] summary {
 }
 
 @media (min-width: 768px) { /* md */
+	summary, input[type=number] {
+		font-size: large;
+	}
 }
 
 @media (min-width: 1024px) { /* lg */

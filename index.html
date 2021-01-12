@@ -21,7 +21,7 @@
 	<label for="status-input">Search for a status code:</label>
 	<input id="status-input" type="number" value="200" min="100" max="511">
 
-	<details open>
+	<details>
 		<summary>Informational responses (100–199) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
 		<h3 id="100"><b>100</b> Continue</h3>
 		<p>This interim response indicates that everything so far is OK and that the client should continue the request, or ignore the response if the request is already finished. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100" target="_blank">Read more</a></p>
@@ -29,7 +29,7 @@
 		<h3 id="101"><b>101</b> Switching Protocol</h3>
 		<p>This code is sent in response to an Upgrade request header from the client, and indicates the protocol the server is switching to. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/101" target="_blank">Read more</a></p>
 		<hr>
-		<h3 id="102"><b>102</b> Processing</h3>
+		<h3 id="102"><b>102</b> Processing <sub>(WebDAV)</sub></h3>
 		<p>This code indicates that the server has received and is processing the request, but no response is available yet. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/102" target="_blank">Read more</a></p>
 		<hr>
 		<h3 id="103"><b>103</b> Early Hints</h3>
@@ -37,19 +37,78 @@
 	</details>
 	<details>
 		<summary>Successful responses (200–299) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
-		...
+		<h3 id="200"><b>200</b> OK</h3>
+		<p>The request has succeeded. The meaning of the success depends on the HTTP method:
+		<ul>
+		<li>GET: The resource has been fetched and is transmitted in the message body.</li>
+		<li>HEAD: The entity headers are in the message body.</li>
+		<li>PUT or POST: The resource describing the result of the action is transmitted in the message body.</li>
+		<li>TRACE: The message body contains the request message as received by the server.</li>
+		</ul>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="201"><b>201</b> Created</h3>
+		<p>The request has succeeded and a new resource has been created as a result. This is typically the response sent after POST requests, or some PUT requests. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="202"><b>202</b> Accepted</h3>
+		<p>The request has been received but not yet acted upon. It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request. It is intended for cases where another process or server handles the request, or for batch processing. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="203"><b>203</b> Non-Authoritative Information</h3>
+		<p>This response code means the returned meta-information is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy. This is mostly used for mirrors or backups of another resource. Except for that specific case, the "200 OK" response is preferred to this status. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="204"><b>204</b> No Content</h3>
+		<p>There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="205"><b>205</b> Reset Content</h3>
+		<p>Tells the user-agent to reset the document which sent this request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/205" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="206"><b>206</b> Partial Content</h3>
+		<p>This response code is used when the Range header is sent from the client to request only part of a resource. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="207"><b>207</b> Multi-Status <sub>(WebDAV)</sub></h3>
+		<p>Conveys information about multiple resources, for situations where multiple status codes might be appropriate. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/207" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="208"><b>208</b> Already Reported <sub>(WebDAV)</sub></h3>
+		<p>Used inside a &lt;dav:propstat&gt; response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/208" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="226"><b>226</b> IM Used <sub>(HTTP Delta encoding)</sub></h3>
+		<p>The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/226" target="_blank">Read more</a></p>
+
 	</details>
-	<details>
+	<details open>
 		<summary>Redirects (300–399) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
-		...
+		<h3 id="300"><b>300</b> Multiple Choice</h3>
+		<p>The request has more than one possible response. The user-agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.) <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/300" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="301"><b>301</b> Moved Permanently</h3>
+		<p>The URL of the requested resource has been changed permanently. The new URL is given in the response. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="302"><b>302</b> Found</h3>
+		<p>This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="303"><b>303</b> See Other</h3>
+		<p>The server sent this response to direct the client to get the requested resource at another URI with a GET request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="304"><b>304</b> Not Modified</h3>
+		<p>This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="305"><b>305</b> Use Proxy &mdash; <small><b>Deprecated</b></small></h3>
+		<p>Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.</p>
+		<hr>
+		<h3 id="306"><b>306</b> <small><b>Unused</b></small></h3>
+		<p>This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.</p>
+		<hr>
+		<h3 id="307"><b>307</b> Temporary Redirect</h3>
+		<p>The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. This has the same semantics as the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="308"><b>308</b> Permanent Redirect</h3>
+		<p>This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/308" target="_blank">Read more</a></p>
 	</details>
 	<details>
 		<summary>Client errors (400–499) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
-		...
 	</details>
 	<details>
 		<summary>Server errors (500–599) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
-		...
 	</details>
 
 	<small><p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">MDN Web Docs</a> &nbsp; &nbsp; Made by: <a href="https://justingolden.me/" target="_blank">Justin Golden</a></p></small>
