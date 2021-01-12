@@ -39,6 +39,11 @@ window.onload = ()=> {
 		setTimeout( ()=> {
 			const elm = document.getElementById(hash.toString() );
 			elm.scrollIntoView();
+			for(let code of codes) {
+				document.getElementById(code).classList.remove('highlight');
+			}
+			elm.classList.add('highlight');
+			console.log(elm.classList);
 		}, 100);
 	}
 

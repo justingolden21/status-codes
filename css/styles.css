@@ -103,6 +103,10 @@ details[open] summary {
 	margin-bottom: 1rem;
 }
 
+.highlight {
+	background-color: #fea;
+}
+
 @keyframes slideIn {
 	from {
 		opacity: 0;
