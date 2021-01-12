@@ -12,6 +12,8 @@ Information from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTT
 
 Icon from [Hero Icons](https://heroicons.dev/)
 
+Also see [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
 
 ### Links
 

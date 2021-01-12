@@ -104,7 +104,7 @@
 		<h3 id="308"><b>308</b> Permanent Redirect</h3>
 		<p>This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/308" target="_blank">Read more</a></p>
 	</details>
-	<details open>
+	<details>
 		<summary>Client errors (400–499) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
 		<h3 id="400"><b>400</b> Bad Request</h3>
 		<p>The server could not understand the request due to invalid syntax. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400" target="_blank">Read more</a></p>
@@ -192,12 +192,43 @@
 		<hr>
 		<h3 id="451"><b>451</b> Unavailable For Legal Reasons</h3>
 		<p>The user-agent requested a resource that cannot legally be provided, such as a web page censored by a government. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451" target="_blank">Read more</a></p>
-		<hr>
 	</details>
-	<details>
+	<details open>
 		<summary>Server errors (500–599) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
+		<h3 id="500"><b>500</b> Internal Server Error</h3>
+		<p>The server has encountered a situation it doesn't know how to handle. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="501"><b>501</b> Not Implemented</h3>
+		<p>The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="502"><b>502</b> Bad Gateway</h3>
+		<p>This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="503"><b>503</b> Service Unavailable</h3>
+		<p>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="504"><b>504</b> Gateway Timeout</h3>
+		<p>This error response is given when the server is acting as a gateway and cannot get a response in time. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="505"><b>505</b> HTTP Version Not Supported</h3>
+		<p>The HTTP version used in the request is not supported by the server. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/505" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="506"><b>506</b> Variant Also Negotiates</h3>
+		<p>The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/506" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="507"><b>507</b> Insufficient Storage <sub>(WebDAV)</sub></h3>
+		<p>The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/507" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="508"><b>508</b> Loop Detected <sub>(WebDAV)</sub></h3>
+		<p>The server detected an infinite loop while processing the request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="510"><b>510</b> Not Extended</h3>
+		<p>Further extensions to the request are required for the server to fulfil it. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/510" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="511"><b>511</b> Network Authentication Required</h3>
+		<p>The 511 status code indicates that the client needs to authenticate to gain network access. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/511" target="_blank">Read more</a></p>
 	</details>
 
-	<small><p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">MDN Web Docs</a> &nbsp; &nbsp; Made by: <a href="https://justingolden.me/" target="_blank">Justin Golden</a></p></small>
+	<small><p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">MDN Web Docs</a> &mdash; Made by: <a href="https://justingolden.me/" target="_blank">Justin Golden</a> &mdash; Also see <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">Wikipedia</a></p></small>
 </body>
 </html>
