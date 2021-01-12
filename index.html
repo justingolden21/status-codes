@@ -21,7 +21,7 @@
 	<label for="status-input">Search for a status code:</label>
 	<input id="status-input" type="number" value="200" min="100" max="511">
 
-	<details>
+	<details open>
 		<summary>Informational responses (100–199) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
 		<h3 id="100"><b>100</b> Continue</h3>
 		<p>This interim response indicates that everything so far is OK and that the client should continue the request, or ignore the response if the request is already finished. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100" target="_blank">Read more</a></p>
@@ -193,7 +193,7 @@
 		<h3 id="451"><b>451</b> Unavailable For Legal Reasons</h3>
 		<p>The user-agent requested a resource that cannot legally be provided, such as a web page censored by a government. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451" target="_blank">Read more</a></p>
 	</details>
-	<details open>
+	<details>
 		<summary>Server errors (500–599) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
 		<h3 id="500"><b>500</b> Internal Server Error</h3>
 		<p>The server has encountered a situation it doesn't know how to handle. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500" target="_blank">Read more</a></p>

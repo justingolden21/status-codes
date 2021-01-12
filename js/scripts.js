@@ -6,13 +6,20 @@
 // dark mode, fullscreen, contact btns on bottom?
 // update descriptions with <code></code> and more links like in source
 
+const codes = [100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304, 305, 306, 307, 308, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 421, 422, 423, 424, 425, 426, 428, 429, 431, 451, 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, 511];
+
 window.onload = ()=> {
-	document.getElementById('status-input').select();
+	const statusInput = document.getElementById('status-input');
+	statusInput.select();
+
+	// statusInput.onchange = ()=> {
+	// 	// statusInput.value
+	// };
 
 	// one details open at a time
 	// https://stackoverflow.com/a/36994802/4907950
 	const details = document.querySelectorAll('details');
-	details.forEach(targetDetail=> {
+	details.forEach(targetDetail => {
 		targetDetail.addEventListener('click', ()=> {
 			// close details that aren't the target
 			details.forEach(detail => {
@@ -22,4 +29,18 @@ window.onload = ()=> {
 			});
 		});
 	});
+
+	let hash = parseInt(window.location.hash.substring(1) );
+	if(codes.includes(hash) ) {
+		let idx = hash.toString()[0] - 1;
+		details.forEach(targetDetail => targetDetail.removeAttribute('open') );
+		details[idx].setAttribute('open', true);
+		console.log(hash);
+		setTimeout( ()=> {
+			const elm = document.getElementById(hash.toString() );
+			elm.scrollIntoView();
+		}, 100);
+	}
+
+
 };

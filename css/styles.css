@@ -13,6 +13,9 @@ img, button {
 	background: #e6e6e6;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
 	text-align: center;
