@@ -17,6 +17,8 @@ body {
 	font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
 	text-align: center;
 	margin: 1rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
 	color: #333;
 	font-weight: lighter;
 }
@@ -40,12 +42,13 @@ a:hover {
 }
 summary {
 	cursor: pointer;
+	font-weight: bold;
 
 }
 summary, input[type=number] {
 	border: 1px solid #333;
 	padding: 0.5rem;
-	margin: 1rem;
+	margin-top: 1rem;
 	font-size: medium;
 	color: #333;
 }
@@ -55,6 +58,9 @@ summary:hover, input[type=number]:hover {
 summary:focus, input[type=number]:focus {
 	border-width: 2px;
 	outline: none;
+}
+details p {
+	text-align: left; 
 }
 
 @media (min-width: 640px) { /* sm */

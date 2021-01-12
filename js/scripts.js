@@ -1,3 +1,5 @@
+// todo: url params and searching/linking codes
+
 window.onload = ()=> {
 	document.getElementById('status-input').select();
 
