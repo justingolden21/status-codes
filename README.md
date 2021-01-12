@@ -1,5 +1,7 @@
 # Status Codes
 
+<img src="img/icon.svg" width="32px">
+
 ### About
 
 A simple quick reference for HTTP response status codes. Just type a code to find it.
