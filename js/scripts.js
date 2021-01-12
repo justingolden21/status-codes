@@ -1,6 +1,9 @@
 // todo: url params and searching/linking codes
 // expand all / collapse all btn
 // print friendly table and btn
+// input onchange: validate from list of options), then open correct details, then scroll to element with id
+// make input dropdown?
+// dark mode, fullscreen, contact btns on bottom?
 
 window.onload = ()=> {
 	document.getElementById('status-input').select();
