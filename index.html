@@ -75,7 +75,7 @@
 		<p>The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/226" target="_blank">Read more</a></p>
 
 	</details>
-	<details open>
+	<details>
 		<summary>Redirects (300–399) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
 		<h3 id="300"><b>300</b> Multiple Choice</h3>
 		<p>The request has more than one possible response. The user-agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.) <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/300" target="_blank">Read more</a></p>
@@ -104,8 +104,41 @@
 		<h3 id="308"><b>308</b> Permanent Redirect</h3>
 		<p>This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/308" target="_blank">Read more</a></p>
 	</details>
-	<details>
+	<details open>
 		<summary>Client errors (400–499) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
+		<h3 id="400"><b>400</b> Bad Request</h3>
+		<p>The server could not understand the request due to invalid syntax. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="401"><b>401</b> Unauthorized</h3>
+		<p>Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="402"><b>402</b> Payment Required &mdash; <small><b>Experimental</b></small></h3>
+		<p>This response code is reserved for future use. The initial aim for creating this code was using it for digital payment systems, however this status code is used very rarely and no standard convention exists. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="403"><b>403</b> Forbidden</h3>
+		<p>The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401, the client's identity is known to the server. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="404"><b>404</b> Not Found</h3>
+		<p>The server can not find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurrence on the web. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="405"><b>405</b> Method Not Allowed</h3>
+		<p>The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="406"><b>406</b> Not Acceptable</h3>
+		<p>This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="407"><b>407</b> Proxy Authentication Required</h3>
+		<p>This is similar to 401 but authentication is needed to be done by a proxy. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/407" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="408"><b>408</b> Request Timeout</h3>
+		<p>This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="409"><b>409</b> Conflict</h3>
+		<p>This response is sent when a request conflicts with the current state of the server. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409" target="_blank">Read more</a></p>
+		<hr>
+		<h3 id="410"><b>410</b> Gone</h3>
+		<p>This response is sent when the requested content has been permanently deleted from server, with no forwarding address. Clients are expected to remove their caches and links to the resource. The HTTP specification intends this status code to be used for "limited-time, promotional services". APIs should not feel compelled to indicate resources that have been deleted with this status code. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410" target="_blank">Read more</a></p>
+		<hr>
 	</details>
 	<details>
 		<summary>Server errors (500–599) <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></summary>
