@@ -36,6 +36,8 @@ a {
 	color: #36c;
 	text-decoration: none;
 	font-weight: bold;
+	margin: 0.125rem;
+	padding: 0.125rem;
 }
 a:hover {
 	text-decoration: underline;
@@ -56,11 +58,22 @@ summary:hover, input[type=number]:hover {
 	border-color: #36c;
 }
 summary:focus, input[type=number]:focus {
-	border-width: 2px;
+	box-shadow: 2px 2px 0px #333;
 	outline: none;
+}
+a:focus {
+	outline: none;
+	border: 1px solid #36c;
 }
 details p {
 	text-align: left; 
+}
+
+details h3, input[type=number] {
+	font-family: Courier New;
+}
+input[type=number] {
+	font-weight: bold;
 }
 
 @media (min-width: 640px) { /* sm */
