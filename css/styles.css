@@ -45,14 +45,15 @@ a:hover {
 }
 summary {
 	cursor: pointer;
-	font-weight: bold;
-
+}
+input[type=number] {
+	border: 1px solid #333;
 }
 summary, input[type=number] {
-	border: 1px solid #333;
 	padding: 0.5rem;
-	margin-top: 1rem;
+	margin-bottom: 1rem;
 	font-size: medium;
+	font-weight: bold;
 	color: #333;
 }
 summary:hover, input[type=number]:hover {
@@ -60,7 +61,7 @@ summary:hover, input[type=number]:hover {
 }
 summary:focus, input[type=number]:focus {
 	outline: none;
-	box-shadow: 2px 2px 0px #333;
+	box-shadow: 0px 4px 0px #333;
 	transition: box-shadow 0.25s ease-in-out;
 }
 a:focus {
@@ -74,9 +75,6 @@ details p, details h3 {
 details h3, input[type=number] {
 	font-family: Courier New;
 }
-input[type=number] {
-	font-weight: bold;
-}
 
 details[open] h3 {
 	animation: slideIn 0.5s ease-in-out;
@@ -84,14 +82,26 @@ details[open] h3 {
 details[open] p, details[open] hr {
 	animation: fadeIn 0.75s 0.25s both ease-in-out;
 }
-details[open] summary svg {
-	color: #36c;
-}
-
 summary svg {
 	vertical-align: middle;
 	height: 1.5rem;
 	margin-left: 0.25rem;
+	transition: color 0.25s linear;
+}
+details[open] summary svg {
+	color: #36c;
+}
+
+details {
+	border: 1px solid #999;
+	padding: 1rem;
+}
+summary {
+	margin: -1rem;
+}
+details[open] summary {
+	border-bottom: 1px solid #999;
+	margin-bottom: 1rem;
 }
 
 @keyframes slideIn {
