@@ -6,6 +6,13 @@
 
 A simple quick reference for HTTP response status codes. Just type a code to find it.
 
+### Sources
+
+Information from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+Icon from [Hero Icons](https://heroicons.dev/)
+
+
 ### Links
 
 - Live demo: https://justingolden.me/status-codes

@@ -84,6 +84,15 @@ details[open] h3 {
 details[open] p, details[open] hr {
 	animation: fadeIn 0.75s 0.25s both ease-in-out;
 }
+details[open] summary svg {
+	color: #36c;
+}
+
+summary svg {
+	vertical-align: middle;
+	height: 1.5rem;
+	margin-left: 0.25rem;
+}
 
 @keyframes slideIn {
 	from {
