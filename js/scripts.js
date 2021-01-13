@@ -37,6 +37,7 @@ window.onload = ()=> {
 
 	let hash = parseInt(window.location.hash.substring(1) );
 	openCode(hash);
+	statusInput.value = hash;
 };
 
 function openCode(hash) {
