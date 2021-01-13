@@ -12,9 +12,14 @@ window.onload = ()=> {
 	const statusInput = document.getElementById('status-input');
 	statusInput.select();
 
-	// statusInput.onchange = ()=> {
-	// 	// statusInput.value
-	// };
+	statusInput.onchange = ()=> {
+		const val = parseInt(statusInput.value);
+		if(codes.includes(val) ) {
+			const location = window.location.toString().split('#')[0];
+			history.replaceState(null, null, location + '#' + val);
+			openCode(val);		
+		}
+	};
 
 	// one details open at a time
 	// https://stackoverflow.com/a/36994802/4907950
@@ -31,21 +36,21 @@ window.onload = ()=> {
 	});
 
 	let hash = parseInt(window.location.hash.substring(1) );
-	if(codes.includes(hash) ) {
-		let idx = hash.toString()[0] - 1;
-		details.forEach(targetDetail => targetDetail.removeAttribute('open') );
-		details[idx].setAttribute('open', true);
-		console.log(hash);
-		setTimeout( ()=> {
-			const elm = document.getElementById(hash.toString() );
-			elm.scrollIntoView();
-			for(let code of codes) {
-				document.getElementById(code).classList.remove('highlight');
-			}
-			elm.classList.add('highlight');
-			console.log(elm.classList);
-		}, 100);
-	}
-
-
+	openCode(hash);
 };
+
+function openCode(hash) {
+	if(!codes.includes(hash) ) return;
+	const idx = hash.toString()[0] - 1;
+	const details = document.querySelectorAll('details');
+	details.forEach(targetDetail => targetDetail.removeAttribute('open') );
+	details[idx].setAttribute('open', true);
+	setTimeout( ()=> {
+		const elm = document.getElementById(hash.toString() );
+		elm.scrollIntoView();
+		for(let code of codes) {
+			document.getElementById(code.toString() ).classList.remove('highlight');
+		}
+		elm.classList.add('highlight');
+	}, 100);
+}
