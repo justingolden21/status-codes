@@ -46,13 +46,17 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-summary {
+summary, button {
 	cursor: pointer;
 }
-input[type=number] {
+button {
+	margin-left: 0.5rem;
+	background: transparent;
+}
+input[type=number], button {
 	border: 1px solid #333;
 }
-summary, input[type=number] {
+summary, input[type=number], button {
 	padding: 0.5rem;
 	margin-bottom: 1rem;
 	font-size: medium;
@@ -62,7 +66,7 @@ summary, input[type=number] {
 summary:hover, input[type=number]:hover {
 	border-color: #36c;
 }
-summary:focus, input[type=number]:focus {
+summary:focus, input[type=number]:focus, button:focus {
 	outline: none;
 	box-shadow: 0px 4px 0px #333;
 	transition: box-shadow 0.25s ease-in-out;
@@ -85,9 +89,11 @@ details[open] h3 {
 details[open] p, details[open] hr, details[open] ul {
 	animation: fadeIn 0.75s 0.25s both ease-in-out;
 }
-summary svg {
+summary svg, button svg {
 	vertical-align: middle;
 	height: 1.5rem;
+}
+summary svg {
 	margin-left: 0.25rem;
 }
 
