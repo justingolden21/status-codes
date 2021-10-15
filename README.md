@@ -14,17 +14,20 @@ Icon from [Hero Icons](https://heroicons.dev/)
 
 Also see [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
+### Dev
+
+`npx live-server`
 
 ### Links
 
-- Live demo: https://justingolden.me/status-codes
+-   Live demo: https://justingolden.me/status-codes
 
-- This repo: https://github.com/justingolden21/status-codes
+-   This repo: https://github.com/justingolden21/status-codes
 
 <hr>
 
-- My website: https://justingolden.me
+-   My website: https://justingolden.me
 
-- My repos: https://github.com/justingolden21
+-   My repos: https://github.com/justingolden21
 
-- Contact me: contact@justingolden.me
+-   Contact me: contact@justingolden.me
