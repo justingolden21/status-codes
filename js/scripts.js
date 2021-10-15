@@ -5,6 +5,14 @@
 // make input dropdown?
 // dark mode, fullscreen, contact btns on bottom?
 // update descriptions with <code></code> and more links like in source
+// maybe todo: 404 page
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker
+		.register('sw.js')
+		.then((reg) => console.log('service worker registered'))
+		.catch((err) => console.log('service worker not registered', err));
+}
 
 const codes = [
 	100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300,
