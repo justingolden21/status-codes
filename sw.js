@@ -3,6 +3,8 @@ const ASSETS = [
 	'/',
 	'/index.html',
 	'/js/scripts.js',
+	'/js/share.js',
+	'/js/install.js',
 	'/css/styles.css',
 	'/img/icon.png',
 	'/img/icon.svg',
