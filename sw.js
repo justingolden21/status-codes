@@ -1,6 +1,5 @@
 const CACHE_NAME = 'cache-v1';
 const ASSETS = [
-	'/',
 	'/index.html',
 	'/js/scripts.js',
 	'/js/share.js',
