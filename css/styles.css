@@ -36,7 +36,7 @@ h3 {
 	font-weight: lighter;
 }
 hr {
-	border: 2px solid #999;
+	border: 1px solid #e6e6e6;
 	border-top: none;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -82,7 +82,7 @@ input[type='number'] {
 }
 summary:hover,
 input[type='number']:hover {
-	border-color: #36c;
+	background-color: #e6e6e6;
 }
 button:focus,
 summary:focus,
@@ -97,7 +97,8 @@ a:focus {
 }
 details p,
 details h3,
-details ul {
+details ul,
+details summary {
 	text-align: left;
 }
 
