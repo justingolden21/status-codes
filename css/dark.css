@@ -3,14 +3,13 @@ body {
 	background-color: #111;
 	color: #fff;
 }
-
-summary {
+summary,
+button {
 	color: #fff;
 }
 input[type='number'] {
 	color: #111;
 }
-
-button {
-	color: #fff;
+summary:hover {
+	background-color: #333;
 }
