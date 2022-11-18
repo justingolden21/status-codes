@@ -5,6 +5,7 @@ const ASSETS = [
 	'js/share.js',
 	'js/install.js',
 	'css/styles.css',
+	'css/dark.css',
 	'img/icon.png',
 	'img/icon.svg',
 ];
