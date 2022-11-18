@@ -48,6 +48,7 @@ a {
 	font-weight: bold;
 	margin: 0.125rem;
 	padding: 0.125rem;
+	border: 1px solid transparent;
 }
 a:hover {
 	text-decoration: underline;
