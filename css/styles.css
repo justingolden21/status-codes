@@ -47,7 +47,12 @@ h3 {
 hr {
 	border: 1px solid #e6e6e6;
 	border-top: none;
-	margin-top: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.group-details {
+	color: #36c;
+	letter-spacing: 0.1rem;
 	margin-bottom: 2rem;
 }
 
