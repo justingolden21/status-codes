@@ -193,3 +193,17 @@ footer {
 @media (min-width: 1280px) {
 	/* xl */
 }
+
+@media print {
+	hr {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	header,
+	footer {
+		display: none;
+	}
+	* {
+		animation: none !important;
+	}
+}
