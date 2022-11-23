@@ -13,3 +13,17 @@ input[type='number'] {
 summary:hover {
 	background-color: #333;
 }
+
+/* lighter blues */
+button:focus,
+summary:focus,
+input[type='number']:focus,
+a:focus {
+	border-color: #69f;
+}
+
+.group-details,
+a,
+summary svg {
+	color: #69f;
+}
