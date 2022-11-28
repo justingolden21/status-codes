@@ -75,7 +75,6 @@ summary {
 	height: 1rem;
 }
 button {
-	padding: 0.5rem;
 	cursor: pointer;
 	background: transparent;
 	margin-left: 0.5rem;
@@ -93,10 +92,14 @@ input[type='number'] {
 }
 summary,
 input[type='number'] {
-	padding: 0.5rem;
 	margin-bottom: 2rem;
 	font-size: medium;
 	color: #333;
+}
+button,
+summary,
+input[type='number'] {
+	padding: 0.5rem;
 }
 summary:hover,
 input[type='number']:hover {
@@ -211,6 +214,11 @@ footer {
 	footer small {
 		display: flex;
 		justify-content: space-between;
+	}
+	button,
+	summary,
+	input[type='number'] {
+		padding: 1rem;
 	}
 }
 
