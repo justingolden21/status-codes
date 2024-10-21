@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTTP Request Methods</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="title" content="HTTP Request Methods">
+    <meta name="description" content="A simple quick reference for HTTP request methods.">
+    <meta name="keywords"
+        content="request methods, request method reference, request method lookup, http request methods, http request method list, what is a get request, what is a put request, what is a post request, difference between post and put request">
+
+    <link rel="icon" href="img/icon.png">
+
+    <meta property="og:title" content="HTTP Request Methods" />
+    <meta property="og:description" content="A simple quick reference for HTTP request methods." />
+    <meta property="og:url" content="https://justingolden.me/status-codes/methods" />
+    <meta property="og:image" content="img/screenshot-methods.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HTTP Request Methods" />
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#333333">
+    <meta name="theme-color" content="#333333">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link id="dark-stylesheet" rel="stylesheet" href="">
+    <script src="js/dark.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/install.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('sw.js')
+                .then((reg) => console.log('service worker registered'))
+                .catch((err) => console.log('service worker not registered', err));
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56">
+                <path fill="none" stroke="currentColor" stroke-width="2"
+                    d="M1 28A2 2 90 0055 28 2 2 90 001 28 M22,42 34,42 34,38 38,38 38,34 42,34 42,14 14,14 14,34 18,34 18,38 22,38zM18 18v12M22 18v12M26 18v12M30 18v12M34 18v12M38 18v12" />
+            </svg>
+            <h1>Request Methods</h1>
+            <button id="share-btn" title="Share">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z">
+                    </path>
+                </svg>
+            </button>
+            <button id="install-btn" title="Install">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <button id="print-btn" title="Print">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <button id="dark-btn" title="Toggle Dark Mode">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
+        </div>
+        <h2>A quick reference for HTTP request methods</h2>
+        <br>
+    </header>
+
+    <details open>
+        <summary>
+            GET
+        </summary>
+        <p>The GET method requests a representation of the specified resource. Requests using GET should only retrieve
+            data and should not contain a request content.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            HEAD
+        </summary>
+        <p>The HEAD method asks for a response identical to a GET request, but without a response body.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            POST
+        </summary>
+        <p>The POST method submits an entity to the specified resource, often causing a change in state or side effects
+            on the server.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            PUT
+        </summary>
+        <p>The PUT method replaces all current representations of the target resource with the request content.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            DELETE
+        </summary>
+        <p>The DELETE method deletes the specified resource.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE" target="_blank"
+                rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            CONNECT
+        </summary>
+        <p>The CONNECT method establishes a tunnel to the server identified by the target resource.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/CONNECT" target="_blank"
+                rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            OPTIONS
+        </summary>
+        <p>The OPTIONS method describes the communication options for the target resource.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS" target="_blank"
+                rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            TRACE
+        </summary>
+        <p>The TRACE method performs a message loop-back test along the path to the target resource.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+    <details open>
+        <summary>
+            PATCH
+        </summary>
+        <p>The PATCH method applies partial modifications to a resource.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH" target="_blank" rel="noopener">MDN
+                Docs</a>
+        </p>
+    </details>
+
+
+    <footer>
+        <a href="/">View all HTTP status codes</a>
+        <small>
+            <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank"
+                    rel="noopener">MDN Web Docs</a></p>
+            <p> Made by: <a href="https://justingolden.me/" target="_blank" rel="noopener">Justin Golden</a></p>
+            <p>Also see <a href="https://en.wikipedia.org/wiki/HTTP#Request_methods" target="_blank"
+                    rel="noopener">Wikipedia</a></p>
+        </small>
+    </footer>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "author": { "@id": "https://justingolden.me/status-codes/methods" },
+                    "copyrightHolder": { "@id": "https://justingolden.me/status-codes/methods" },
+                    "copyrightYear": "2024",
+                    "creator": { "@id": "https://justingolden.me/status-codes/methods" },
+                    "dateModified": "2024-10-21T05:00:00-07:00",
+                    "datePublished": "2024-10-21T05:00:00-07:00",
+                    "description": "An HTTP request method indicates the intent of the request and what operation is expected to be performed if the request is successful. The most commonly used methods are GET, POST, PUT, and DELETE. There are also a few less common methods like HEAD, CONNECT, OPTIONS, and TRACE.",
+                    "headline": "What is an HTTP request method? List all http request methods",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "img/screenshot-methods.jpg"
+                    },
+                    "inLanguage": "en-us",
+                    "mainEntityOfPage": "https://justingolden.me/status-codes/methods",
+                    "name": "What is an HTTP request method?",
+                    "publisher": { "@id": "https://justingolden.me/status-codes/methods" },
+                    "url": "https://justingolden.me/status-codes/methods"
+                }
+            ]
+        }
+    </script>
+
+</body>
+
+</html>

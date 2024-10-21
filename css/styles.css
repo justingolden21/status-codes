@@ -164,8 +164,9 @@ header div {
 	margin-bottom: 1rem;
 }
 
-footer {
-	margin-top: 1rem;
+footer > *:first-child {
+	display: block;
+	margin: 2rem 0;
 }
 
 @keyframes slideIn {

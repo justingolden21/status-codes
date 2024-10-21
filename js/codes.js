@@ -7,13 +7,6 @@
 // update descriptions with <code></code> and more links like in source
 // maybe todo: 404 page
 
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker
-		.register('sw.js')
-		.then((reg) => console.log('service worker registered'))
-		.catch((err) => console.log('service worker not registered', err));
-}
-
 const codes = [
 	100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300,
 	301, 302, 303, 304, 305, 306, 307, 308, 400, 401, 402, 403, 404, 405, 406,
@@ -55,27 +48,6 @@ window.onload = () => {
 		openCode(hash);
 		statusInput.value = hash;
 	}
-
-	// dark mode
-
-	if (
-		window.matchMedia &&
-		window.matchMedia('(prefers-color-scheme: dark)').matches
-	) {
-		document
-			.getElementById('dark-stylesheet')
-			.setAttribute('href', 'css/dark.css');
-	}
-
-	document.getElementById('dark-btn').onclick = function () {
-		const isDark =
-			document.getElementById('dark-stylesheet').getAttribute('href') !==
-			'';
-
-		document
-			.getElementById('dark-stylesheet')
-			.setAttribute('href', isDark ? '' : 'css/dark.css');
-	};
 };
 
 function openCode(hash) {
