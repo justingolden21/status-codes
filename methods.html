@@ -171,6 +171,134 @@
         </p>
     </details>
 
+    <br>
+
+    <h1>Safe, Idempotent, and Cacheable Methods</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Safe</th>
+                <th>Idempotent</th>
+                <th>Cacheable</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>GET</code></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td><code>HEAD</code></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td><code>OPTIONS</code></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td><code>TRACE</code></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td><code>PUT</code></td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td><code>DELETE</code></td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td><code>POST</code></td>
+                <td>No</td>
+                <td>No</td>
+                <td>Conditional</td>
+            </tr>
+            <tr>
+                <td><code>PATCH</code></td>
+                <td>No</td>
+                <td>No</td>
+                <td>Conditional</td>
+            </tr>
+            <tr>
+                <td><code>CONNECT</code></td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    <details>
+        <summary>
+            What is a <b>safe</b> method?
+        </summary>
+        <p>
+            <b>Meaning:</b>
+            A method is considered safe if it does not change the state of the server. In other words, the method only
+            retrieves data or performs a read operation, so the method does not have side effects.
+        </p>
+        <p>
+            <b>Examples:</b>
+            <code>GET</code> and <code>HEAD</code> are safe because they request data without making changes on the
+            server. <code>POST</code>, <code>PUT</code>, and <code>DELETE</code> are not safe because they can change
+            the state of the server.
+        </p>
+        <p>
+            <b>Use case:</b>
+            Safe methods are used when the client wants to fetch data without causing side effects on the server.
+        </p>
+    </details>
+    <details>
+        <summary>
+            What is an <b>idempotent</b> method?
+        </summary>
+        <p>
+            <b>Meaning:</b>
+           A method is idempotent if making the same request multiple times has the same effect as making it once. The state of the server remains the same after the first successful execution.
+        </p>
+        <p>
+            <b>Examples:</b>
+            <code>GET</code>, <code>HEAD</code>, <code>PUT</code>, and <code>DELETE</code> are idempotent. <code>GET</code> always returns the same resource, <code>PUT</code> replaces a resource, so multiple identical requests result in the same final state, and <code>DELETE</code> removes a resource, and if you try to delete the same resource multiple times, the resource remains deleted and the server will be in the same state. <code>POST</code> is not idempotent because it can create new resources, so repeated requests can result in multiple resources being created.
+        </p>
+        <p>
+            <b>Use case:</b>
+            Idempotency is important when requests might be retried (e.g., due to network issues) as it ensures that re-sending the same request doesn't cause additional unintentional changes.            
+        </p>
+    </details>
+    <details>
+        <summary>
+            What is a <b>cacheable</b> method?
+        </summary>
+        <p>
+            <b>Meaning:</b>
+           A method is cacheable if the response can be cached for future use, to avoid fetching the same data repeatedly.
+        </p>
+        <p>
+            <b>Examples:</b>
+            <code>GET</code> is cacheable because its responses often conrtain static content or data that doesn't change frequently. <code>POST</code> can be cacheable in specific cases, but it's less common because <code>POST</code> is often used for actions like creating resources, so responses may vary. <code>PUT</code> and <code>DELETE</code> are not cacheable because they modify resources and storing their responses can lead to stale or incorrect data.
+        </p>
+        <p>
+            <b>Use case:</b>
+            Caching improves performance by decreasing the number of server requests for frequently accessed resources.
+        </p>
+    </details>
+
 
     <footer>
         <a href="/">View all HTTP status codes</a>
