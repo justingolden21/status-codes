@@ -93,8 +93,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Retrieves data from a server without making changes.</p>
+        <p><b>Example:</b> A user visits a blog and requests the homepage by typing the URL into their browser. <code>GET /blog/homepage</code> retrieves the list of recent posts.</p>
     </details>
-    <details open>
+    <details>
         <summary>
             HEAD
         </summary>
@@ -102,8 +105,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Similar to <code>GET</code> but only fetches headers of a resource. Used to check if a resource exists or to inspect metadata.</p>
+        <p><b>Example:</b>A monitoring system pings a website to ensure it's up and running without having to download all content. <code>HEAD /blog/homepage</code> returns a status code and headers indicating if the page is available.</p>
     </details>
-    <details open>
+    <details>
         <summary>
             POST
         </summary>
@@ -112,8 +118,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Submit data to the server, typically to create a new resource.</p>
+        <p><b>Example:</b> A user submits a contact form on a website which submits data to the server. <code>POST /contact</code> sends form data (e.g., name, email) to the server to be processed.</p>
     </details>
-    <details open>
+    <details>
         <summary>
             PUT
         </summary>
@@ -121,8 +130,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Update or replace existing resource or create a resource if it doesn't exist.</p>
+        <p><b>Example:</b> A user updates their profile information. <code>PUT /user/123/profile</code> replaces the user's profile with new data (e.g., email, username).</p>
     </details>
-    <details open>
+    <details>
         <summary>
             DELETE
         </summary>
@@ -131,8 +143,11 @@
                 rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Removes a resource from the server.</p>
+        <p><b>Example:</b> A user deletes their account. <code>DELETE /user/123</code> deletes the user account with ID 123.</p>
     </details>
-    <details open>
+    <details>
         <summary>
             CONNECT
         </summary>
@@ -141,8 +156,11 @@
                 rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Establish a network tunnel, typically for tunneling HTTPS traffic through a proxy server.</p>
+        <p><b>Example:</b> A user connects to a tunnel through an HTTP proxy to an HTTPS server. <code>CONNECT www.example.com:443 HTTP/1.1</code> establishes a tunnel to the HTTPS server at www.example.com over port 443.</p> 
     </details>
-    <details open>
+    <details>
         <summary>
             OPTIONS
         </summary>
@@ -151,8 +169,11 @@
                 rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Retrieve HTTP methods and capabilities supported by the server.</p>
+        <p><b>Example:</b> A client queries the server to determine which methods it supports for a particular resource. <code>OPTIONS /api/users/123</code> returns a list of supported methods (e.g., GET, PUT, DELETE).</p>
     </details>
-    <details open>
+    <details>
         <summary>
             TRACE
         </summary>
@@ -160,8 +181,11 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Echoes back the received request, for diagnostic purposes.</p>
+        <p><b>Example:</b> A user is debugging issues with web requests and wants to see what is received at server-side. <code>TRACE /api/users/123</code> echoes the received request back to the user.</p>
     </details>
-    <details open>
+    <details>
         <summary>
             PATCH
         </summary>
@@ -169,6 +193,9 @@
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH" target="_blank" rel="noopener">MDN
                 Docs</a>
         </p>
+        <hr>
+        <p>Partially update a resource.</p>
+        <p><b>Example:</b> A user wants to update only their email address without altering other data. <code>PATCH /user/123/profile</code> sends only the email field to update.</p> 
     </details>
 
     <br>
