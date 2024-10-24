@@ -33,9 +33,19 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link id="dark-stylesheet" rel="stylesheet" href="">
-    <script src="js/scripts.js"></script>
+    <script src="js/codes.js"></script>
+    <script src="js/dark.js"></script>
     <script src="js/share.js"></script>
     <script src="js/install.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('sw.js')
+                .then((reg) => console.log('service worker registered'))
+                .catch((err) => console.log('service worker not registered', err));
+        }
+    </script>
 </head>
 
 <body>
@@ -500,6 +510,7 @@
     </details>
 
     <footer>
+        <a href="/methods">View all HTTP request methods</a>
         <small>
             <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank"
                     rel="noopener">MDN Web Docs</a></p>
@@ -517,10 +528,10 @@
                     "@type": "WebPage",
                     "author": { "@id": "https://justingolden.me/status-codes/" },
                     "copyrightHolder": { "@id": "https://justingolden.me/status-codes/" },
-                    "copyrightYear": "2022",
+                    "copyrightYear": "2024",
                     "creator": { "@id": "https://justingolden.me/status-codes/" },
-                    "dateModified": "2022-11-17T05:00:00-07:00",
-                    "datePublished": "2022-11-17T05:00:00-07:00",
+                    "dateModified": "2024-10-21T05:00:00-07:00",
+                    "datePublished": "2024-10-21T05:00:00-07:00",
                     "description": "An HTTP status code is a three digit number returned by a server when you visit a webpage with your browser. Every webpage you visit is a request to a server. 200 means the request has succeeded while 404 means the content is not found. Status codes are split into five groups: 100 codes are informational, 200 codes are successes, 300 codes are redirects, 400 codes are client errors, and 500 codes are server errors.",
                     "headline": "What are HTTP Status Codes? List Of Important Status Codes",
                     "image": {

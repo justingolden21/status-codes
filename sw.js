@@ -1,7 +1,9 @@
 const CACHE_NAME = 'cache-v1';
 const ASSETS = [
 	'index.html',
-	'js/scripts.js',
+	'methods.html',
+	'js/codes.js',
+	'js/dark.js',
 	'js/share.js',
 	'js/install.js',
 	'css/styles.css',
